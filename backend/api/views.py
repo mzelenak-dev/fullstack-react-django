@@ -9,6 +9,6 @@ class CreateUserView(generics.CreateAPIView):
   # make sure user does not already exist
   queryset = User.objects.all()
   # necessary data (username, password)
-  serializer_class = User
+  serializer_class = UserSerializer
   # allow unauthenticated users to use this view
   permission_classes = [AllowAny]
